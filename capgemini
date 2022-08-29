@@ -1,0 +1,15 @@
+t=input()
+dic={}
+for i in t:
+    if i in dic.keys():
+        dic[i]+=1
+    else:
+        dic[i]=1
+print(dic)
+ans=t
+for key,val in dic.items():
+    if val>1:
+        a=ans.rfind(key)
+        ans=ans[:a+1]+str(val)+ans[a+1:]
+print(ans)
+    
